@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15226,10 +15226,10 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="LED3" library="SparkFun" deviceset="LED" device="5MM"/>
-<part name="LED4" library="SparkFun" deviceset="LED" device="5MM"/>
-<part name="LED5" library="SparkFun" deviceset="LED" device="5MM"/>
-<part name="LED6" library="SparkFun" deviceset="LED" device="5MM"/>
+<part name="LED3" library="SparkFun" deviceset="LED" device="5MM" value="RED"/>
+<part name="LED4" library="SparkFun" deviceset="LED" device="5MM" value="RED"/>
+<part name="LED5" library="SparkFun" deviceset="LED" device="5MM" value="RED"/>
+<part name="LED6" library="SparkFun" deviceset="LED" device="5MM" value="RED"/>
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="330"/>
 <part name="R6" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="330"/>
 <part name="R7" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="330"/>
@@ -15245,8 +15245,8 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="R20" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10k"/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
-<part name="BC847" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1"/>
-<part name="T2" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1"/>
+<part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1" value="BC847"/>
+<part name="T2" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1" value="BC847"/>
 <part name="R21" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="1k"/>
 <part name="R22" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10k"/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
@@ -15262,7 +15262,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="P+20" library="supply1" deviceset="+5V" device=""/>
 <part name="D2" library="SparkFun" deviceset="DIODE" device="SMA-ALT" value="1N4007"/>
 <part name="GND33" library="supply1" deviceset="GND" device=""/>
-<part name="T3" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1"/>
+<part name="T3" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1" value="BC847"/>
 <part name="R25" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="1k"/>
 <part name="R26" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="10k"/>
 <part name="JP1" library="SparkFun" deviceset="M03" device="-SCREW-5MM"/>
@@ -15276,7 +15276,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="C13" library="SparkFun" deviceset="CAP" device="0805" value="100nf"/>
 <part name="C14" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uf"/>
 <part name="U$5" library="adafruit" deviceset="TRIMPOT" device="TC33X" value="10k"/>
-<part name="T4" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1"/>
+<part name="T4" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT2222ALT1" value="BC847"/>
 <part name="P+26" library="supply1" deviceset="+5V" device=""/>
 <part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="P+28" library="supply1" deviceset="+5V" device=""/>
@@ -15309,7 +15309,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="GND43" library="supply1" deviceset="GND" device=""/>
 <part name="P+31" library="supply1" deviceset="+5V" device=""/>
 <part name="GND46" library="supply1" deviceset="GND" device=""/>
-<part name="74HC4050" library="SparkFun" deviceset="HEX_CONVERTER" device=""/>
+<part name="U$15" library="SparkFun" deviceset="HEX_CONVERTER" device="" value="74HC4050"/>
 <part name="U5" library="SparkFun" deviceset="USD-SOCKET" device="NEW"/>
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
 <part name="GND49" library="supply1" deviceset="GND" device=""/>
@@ -15334,7 +15334,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="C19" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
 <part name="C20" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="C21" library="SparkFun" deviceset="CAP" device="0805" value="100n"/>
+<part name="C21" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
 <part name="P+37" library="supply1" deviceset="+5V" device=""/>
 <part name="GND52" library="supply1" deviceset="GND" device=""/>
 <part name="C22" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
@@ -15345,7 +15345,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="C23" library="SparkFun" deviceset="CAP" device="0805" value="100nf"/>
 <part name="P+41" library="supply1" deviceset="+5V" device=""/>
 <part name="GND56" library="supply1" deviceset="GND" device=""/>
-<part name="C25" library="SparkFun" deviceset="CAP" device="0805" value="100n"/>
+<part name="C25" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
 <part name="P+42" library="supply1" deviceset="+5V" device=""/>
 <part name="GND57" library="supply1" deviceset="GND" device=""/>
 <part name="C26" library="SparkFun" deviceset="CAP" device="0805" value="100nF"/>
@@ -15382,7 +15382,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="R43" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="1K"/>
 <part name="LED11" library="led" deviceset="LED" device="CHIPLED_0805" value="Red"/>
 <part name="LED12" library="led" deviceset="LED" device="CHIPLED_0805" value="Blue"/>
-<part name="FDN340" library="zetex" deviceset="PMOSSOT23" device=""/>
+<part name="Q2" library="zetex" deviceset="PMOSSOT23" device="" value="FDN340"/>
 <part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="Green"/>
 <part name="P+54" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+55" library="SparkFun" deviceset="3.3V" device=""/>
@@ -15394,7 +15394,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="U$13" library="4_Digit_DIsplay" deviceset="MYLIB_LCQ_4D_7SEG" device=""/>
 <part name="P+34" library="supply1" deviceset="+5V" device=""/>
 <part name="GND47" library="supply1" deviceset="GND" device=""/>
-<part name="R46" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="30k civari"/>
+<part name="R46" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="30k"/>
 <part name="P+57" library="supply1" deviceset="+5V" device=""/>
 <part name="U$9" library="crystal" deviceset="CRYSTAL_GNDPAD" device=""/>
 <part name="S11" library="switch-dil" deviceset="DIP08YL" device=""/>
@@ -15427,11 +15427,18 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <part name="H4" library="holes" deviceset="MOUNT-PAD-ROUND" device="3.2"/>
 <part name="H5" library="holes" deviceset="MOUNT-PAD-ROUND" device="3.2"/>
 <part name="H6" library="holes" deviceset="MOUNT-PAD-ROUND" device="3.2"/>
+<part name="R13" library="SparkFun" deviceset="RESISTOR" device="0805-RES" value="100R"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-45.72" y="-63.5" size="1.778" layer="95">CS</text>
+<text x="248.92" y="-160.02" size="2.54" layer="94">Released under the GNU-GPL v2</text>
+<text x="248.92" y="-165.1" size="2.54" layer="94">https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</text>
+<wire x1="292.1" y1="-167.64" x2="292.1" y2="-175.26" width="0.1524" layer="94"/>
+<text x="294.64" y="-171.069" size="2.54" layer="94">Designed by: Yusuf Gundogdu</text>
+<text x="294.64" y="-174.244" size="2.54" layer="94">Revised by: Okan Saracoglu</text>
+<text x="337.82" y="-182.88" size="2.54" layer="94">v1.3</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="71.12" y="48.26"/>
@@ -15530,7 +15537,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="R20" gate="G$1" x="152.4" y="91.44" rot="R90"/>
 <instance part="GND24" gate="1" x="160.02" y="78.74"/>
 <instance part="P+12" gate="1" x="167.64" y="91.44" rot="R180"/>
-<instance part="BC847" gate="BC847" x="157.48" y="99.06" smashed="yes">
+<instance part="T1" gate="BC847" x="157.48" y="99.06" smashed="yes">
 <attribute name="NAME" x="154.94" y="104.14" size="1.778" layer="95"/>
 <attribute name="VALUE" x="147.32" y="104.14" size="1.778" layer="96"/>
 </instance>
@@ -15583,7 +15590,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="R29" gate="G$1" x="-119.38" y="111.76" rot="R90"/>
 <instance part="R30" gate="G$1" x="-111.76" y="109.22" rot="R90"/>
 <instance part="GND39" gate="1" x="-132.08" y="124.46" rot="R270"/>
-<instance part="P+32" gate="1" x="-127" y="68.58"/>
+<instance part="P+32" gate="1" x="-127" y="93.98"/>
 <instance part="P+33" gate="1" x="-86.36" y="60.96" rot="R270"/>
 <instance part="GND41" gate="1" x="-86.36" y="55.88" rot="R90"/>
 <instance part="GND42" gate="1" x="-144.78" y="60.96" rot="R270"/>
@@ -15608,7 +15615,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="GND43" gate="1" x="10.16" y="0" rot="R90"/>
 <instance part="P+31" gate="1" x="7.62" y="2.54" rot="R270"/>
 <instance part="GND46" gate="1" x="-33.02" y="2.54" rot="R270"/>
-<instance part="74HC4050" gate="G$1" x="-22.86" y="-68.58"/>
+<instance part="U$15" gate="G$1" x="-22.86" y="-68.58"/>
 <instance part="U5" gate="G$1" x="20.32" y="-66.04"/>
 <instance part="GND48" gate="1" x="-7.62" y="-53.34" rot="R180"/>
 <instance part="GND49" gate="1" x="10.16" y="-91.44"/>
@@ -15683,7 +15690,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="R43" gate="G$1" x="276.86" y="-68.58" rot="R90"/>
 <instance part="LED11" gate="G$1" x="264.16" y="-78.74"/>
 <instance part="LED12" gate="G$1" x="276.86" y="-78.74"/>
-<instance part="FDN340" gate="A" x="-66.04" y="-96.52" rot="MR270"/>
+<instance part="Q2" gate="A" x="-66.04" y="-96.52" rot="MR270"/>
 <instance part="LED2" gate="G$1" x="-30.48" y="38.1" rot="R180"/>
 <instance part="P+54" gate="G$1" x="-50.8" y="-55.88"/>
 <instance part="P+55" gate="G$1" x="-99.06" y="-83.82" rot="R90"/>
@@ -15713,7 +15720,11 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="LED13" gate="G$1" x="-53.34" y="157.48" rot="R180"/>
 <instance part="GND64" gate="1" x="-53.34" y="137.16"/>
 <instance part="FRAME1" gate="G$1" x="-205.74" y="-190.5"/>
-<instance part="FRAME1" gate="G$2" x="246.38" y="-190.5"/>
+<instance part="FRAME1" gate="G$2" x="246.38" y="-190.5" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="259.08" y="-189.23" size="2.54" layer="94" display="off"/>
+<attribute name="SHEET" x="332.74" y="-189.23" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="264.16" y="-171.45" size="2.54" layer="94"/>
+</instance>
 <instance part="S6" gate="1" x="71.12" y="-17.78" rot="R270"/>
 <instance part="P1" gate="G$1" x="-17.78" y="137.16" rot="R270"/>
 <instance part="JP8" gate="G$1" x="180.34" y="-160.02"/>
@@ -15727,6 +15738,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <instance part="H4" gate="G$1" x="297.18" y="193.04"/>
 <instance part="H5" gate="G$1" x="297.18" y="182.88"/>
 <instance part="H6" gate="G$1" x="297.18" y="172.72"/>
+<instance part="R13" gate="G$1" x="-127" y="81.28" rot="R90"/>
 </instances>
 <busses>
 <bus name="SCL,SDA,AREF,GND,D13,D12,D11,D10,D9,D8">
@@ -15877,7 +15889,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="S11" gate="1" pin="13"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="1A"/>
+<pinref part="U$15" gate="G$1" pin="1A"/>
 <wire x1="-33.02" y1="-63.5" x2="-40.64" y2="-63.5" width="0.1524" layer="91"/>
 <label x="-40.64" y="-63.5" size="1.778" layer="95"/>
 </segment>
@@ -16188,11 +16200,6 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <junction x="-88.9" y="60.96"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="A"/>
-<pinref part="P+32" gate="1" pin="+5V"/>
-<wire x1="-127" y1="50.8" x2="-127" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R27" gate="G$1" pin="1"/>
 <pinref part="P+21" gate="1" pin="+5V"/>
 <wire x1="-60.96" y1="15.24" x2="-58.42" y2="15.24" width="0.1524" layer="91"/>
@@ -16235,7 +16242,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <segment>
 <pinref part="P+36" gate="1" pin="+5V"/>
 <wire x1="-48.26" y1="-96.52" x2="-60.96" y2="-96.52" width="0.1524" layer="91"/>
-<pinref part="FDN340" gate="A" pin="S"/>
+<pinref part="Q2" gate="A" pin="S"/>
 </segment>
 <segment>
 <pinref part="P+37" gate="1" pin="+5V"/>
@@ -16323,6 +16330,11 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="M1" gate="G$1" pin="VCC"/>
 <wire x1="76.2" y1="-154.94" x2="66.04" y2="-154.94" width="0.1524" layer="91"/>
 <label x="68.58" y="-154.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="2"/>
+<pinref part="P+32" gate="1" pin="+5V"/>
+<wire x1="-127" y1="86.36" x2="-127" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -16528,7 +16540,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="160.02" y1="83.82" x2="160.02" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="93.98" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
 <junction x="160.02" y="83.82"/>
-<pinref part="BC847" gate="BC847" pin="E"/>
+<pinref part="T1" gate="BC847" pin="E"/>
 </segment>
 <segment>
 <pinref part="T2" gate="BC847" pin="E"/>
@@ -16680,7 +16692,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <junction x="-27.94" y="-2.54"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="GND"/>
+<pinref part="U$15" gate="G$1" pin="GND"/>
 <pinref part="GND48" gate="1" pin="GND"/>
 <wire x1="-12.7" y1="-60.96" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-60.96" x2="-7.62" y2="-55.88" width="0.1524" layer="91"/>
@@ -16713,10 +16725,10 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="-50.8" y1="-68.58" x2="-50.8" y2="-66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="5A"/>
+<pinref part="U$15" gate="G$1" pin="5A"/>
 <pinref part="GND54" gate="1" pin="GND"/>
 <wire x1="-33.02" y1="-73.66" x2="-35.56" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="74HC4050" gate="G$1" pin="6A"/>
+<pinref part="U$15" gate="G$1" pin="6A"/>
 <wire x1="-35.56" y1="-73.66" x2="-38.1" y2="-73.66" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-76.2" x2="-35.56" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="-76.2" x2="-35.56" y2="-73.66" width="0.1524" layer="91"/>
@@ -16978,7 +16990,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <junction x="12.7" y="195.58"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="VCC"/>
+<pinref part="U$15" gate="G$1" pin="VCC"/>
 <wire x1="-33.02" y1="-60.96" x2="-35.56" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="-60.96" x2="-35.56" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="P+38" gate="G$1" pin="3.3V"/>
@@ -17186,7 +17198,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="152.4" y1="99.06" x2="149.86" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="96.52" x2="152.4" y2="99.06" width="0.1524" layer="91"/>
 <junction x="152.4" y="99.06"/>
-<pinref part="BC847" gate="BC847" pin="B"/>
+<pinref part="T1" gate="BC847" pin="B"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -17194,7 +17206,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <wire x1="160.02" y1="104.14" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="106.68" x2="170.18" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="BC847" gate="BC847" pin="C"/>
+<pinref part="T1" gate="BC847" pin="C"/>
 <pinref part="MOTOR" gate="G$1" pin="2"/>
 <wire x1="170.18" y1="101.6" x2="172.72" y2="101.6" width="0.1524" layer="91"/>
 </segment>
@@ -17890,7 +17902,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="S14" gate="1" pin="6"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="2A"/>
+<pinref part="U$15" gate="G$1" pin="2A"/>
 <wire x1="-33.02" y1="-66.04" x2="-40.64" y2="-66.04" width="0.1524" layer="91"/>
 <label x="-40.64" y="-66.04" size="1.778" layer="95"/>
 </segment>
@@ -17902,10 +17914,10 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="S14" gate="1" pin="5"/>
 </segment>
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="3A"/>
+<pinref part="U$15" gate="G$1" pin="3A"/>
 <wire x1="-33.02" y1="-68.58" x2="-35.56" y2="-68.58" width="0.1524" layer="91"/>
 <label x="-40.64" y="-68.58" size="1.778" layer="95"/>
-<pinref part="74HC4050" gate="G$1" pin="4A"/>
+<pinref part="U$15" gate="G$1" pin="4A"/>
 <wire x1="-35.56" y1="-68.58" x2="-40.64" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-71.12" x2="-35.56" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="-35.56" y1="-71.12" x2="-35.56" y2="-68.58" width="0.1524" layer="91"/>
@@ -18081,7 +18093,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </net>
 <net name="N$39" class="0">
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="2Y"/>
+<pinref part="U$15" gate="G$1" pin="2Y"/>
 <wire x1="-12.7" y1="-66.04" x2="-2.54" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-66.04" x2="-2.54" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="DI"/>
@@ -18090,7 +18102,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </net>
 <net name="N$40" class="0">
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="3Y"/>
+<pinref part="U$15" gate="G$1" pin="3Y"/>
 <wire x1="-12.7" y1="-68.58" x2="0" y2="-68.58" width="0.1524" layer="91"/>
 <wire x1="0" y1="-68.58" x2="0" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="SCK"/>
@@ -18099,7 +18111,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 </net>
 <net name="LED" class="0">
 <segment>
-<pinref part="74HC4050" gate="G$1" pin="4Y"/>
+<pinref part="U$15" gate="G$1" pin="4Y"/>
 <wire x1="-12.7" y1="-71.12" x2="-5.08" y2="-71.12" width="0.1524" layer="91"/>
 <label x="-10.16" y="-71.12" size="1.778" layer="95"/>
 </segment>
@@ -18120,7 +18132,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <segment>
 <pinref part="LED9" gate="G$1" pin="C"/>
 <wire x1="-12.7" y1="-43.18" x2="-2.54" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="74HC4050" gate="G$1" pin="1Y"/>
+<pinref part="U$15" gate="G$1" pin="1Y"/>
 <wire x1="-12.7" y1="-63.5" x2="-5.08" y2="-63.5" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="-63.5" x2="-5.08" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="U5" gate="G$1" pin="CS"/>
@@ -18147,7 +18159,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <segment>
 <wire x1="-71.12" y1="-96.52" x2="-83.82" y2="-96.52" width="0.1524" layer="91"/>
 <label x="-83.82" y="-96.52" size="1.778" layer="95"/>
-<pinref part="FDN340" gate="A" pin="D"/>
+<pinref part="Q2" gate="A" pin="D"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VBUS"/>
@@ -18390,7 +18402,7 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <segment>
 <pinref part="IC3" gate="A" pin="OUT"/>
 <wire x1="-81.28" y1="-81.28" x2="-63.5" y2="-81.28" width="0.1524" layer="91"/>
-<pinref part="FDN340" gate="A" pin="G"/>
+<pinref part="Q2" gate="A" pin="G"/>
 <wire x1="-63.5" y1="-81.28" x2="-63.5" y2="-91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -18602,6 +18614,13 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 <pinref part="IC6" gate="G$1" pin="CLK"/>
 <wire x1="96.52" y1="-48.26" x2="88.9" y2="-48.26" width="0.1524" layer="91"/>
 <label x="88.9" y="-48.26" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$65" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="A"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-127" y1="50.8" x2="-127" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
