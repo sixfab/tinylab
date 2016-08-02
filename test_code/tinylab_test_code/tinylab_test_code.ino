@@ -323,7 +323,7 @@ void loop()
 			lcd.print("Temperature(C): ");
 			lcd.setCursor(0, 1);
 			lcd.print(lm35_value);
-			lcd.print("           	   ");
+			lcd.print("                ");
 	    	break;
 	    }
 
@@ -382,7 +382,7 @@ void loop()
 				lcd.print(tm.Minute);
 				lcd.print("-");
 				lcd.print(tm.Second);
-				lcd.print("     ");
+				lcd.print("   ");
 	    	}
 	    	break;
 	    }
