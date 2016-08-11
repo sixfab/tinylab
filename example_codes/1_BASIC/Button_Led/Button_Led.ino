@@ -29,7 +29,7 @@ void setup() {
 
 void loop() {
   // read the state of the pushbutton value:
-  buttonState = digitalRead(button_pin);
+  button_state = digitalRead(button_pin);
   
   if (button_state == LOW) {
     // turn LED on:
