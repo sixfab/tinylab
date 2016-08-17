@@ -39,7 +39,7 @@
 LiquidTWI2 lcd(0x20);
 RotaryEncoder encoder(6, 7);
 tmElements_t tm;
-Sd2Card card;
+SdFat SD;
 LedControl lc=LedControl(10,12,11,1);
 RF24 radio(8,9);
 
@@ -396,7 +396,7 @@ void loop()
 				lcd.setCursor(0, 1);
 				lcd.print("                ");
 				
-	    		if (!card.init(SPI_HALF_SPEED, SD_CS_PIN)) {
+	    		if (!SD.begin(SD_CS_PIN)) {
     				lcd.setCursor(0, 1);
 					lcd.print("FAILED           ");
   
