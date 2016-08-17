@@ -28,7 +28,7 @@
 #include <LiquidTWI2.h>
 #include <RotaryEncoder.h>
 #include <DS1307RTC.h>
-#include <SD.h>
+#include <SdFat.h>
 #include "LedControl.h"
 #include <extEEPROM.h>
 // Radio
