@@ -29,7 +29,7 @@ void loop() {
  lcd.setCursor(0, 1);
  
  // what will write second line
- lcd.print(" by Bosp. Mech.");
+ lcd.print(" by Sixfab Inc.");
 }
  
  
