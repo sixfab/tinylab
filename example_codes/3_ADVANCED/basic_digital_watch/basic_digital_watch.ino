@@ -14,6 +14,7 @@ pin 11 is connected to LOAD
 #include <Wire.h>
 #include <Time.h>
 #include <DS1307RTC.h>
+#include <TimeLib.h>
 #include <LedControl.h>
 
 LedControl lc=LedControl(10,12,11,1);
