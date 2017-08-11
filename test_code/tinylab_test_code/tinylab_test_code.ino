@@ -444,7 +444,7 @@ void loop()
 				lcd.print("                ");
 
 		    	extEEPROM eep(kbits_256, 2, 64);
-		    	uint8_t eepStatus = eep.begin(twiClock400kHz);
+		    	uint8_t eepStatus = eep.begin(extEEPROM::twiClock400kHz);
 
 		    	if(eepStatus == 0){
 		    		lcd.setCursor(0, 1);
