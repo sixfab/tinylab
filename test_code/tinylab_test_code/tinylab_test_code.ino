@@ -25,6 +25,7 @@
 // libraries
 #include "Wire.h"
 #include <Time.h>
+#include <TimeLib.h>
 #include <LiquidTWI2.h>
 #include <RotaryEncoder.h>
 #include <DS1307RTC.h>
