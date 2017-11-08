@@ -47,6 +47,9 @@
  * 29Mar2013 v2 - Updated to span page boundaries (and therefore also          *
  * device boundaries, assuming an integral number of pages per device)         *
  * 08Jul2014 v3 - Generalized for 2kb - 2Mb EEPROMs.                           *
+ * 																			   *
+ * Paolo Paolucci 22-10-2015 v3.2											   *
+ * 09-01-2016 v3.2 Add update function.										   *
  *                                                                             *
  * External EEPROM Library by Jack Christensen is licensed under CC BY-SA 4.0, *
  * http://creativecommons.org/licenses/by-sa/4.0/                              *
@@ -72,21 +75,24 @@ enum eeprom_size_t {
     kbits_2048 = 2048
 };
 
-enum twiClockFreq_t { twiClock100kHz = 100000, twiClock400kHz = 400000 };
-
 //EEPROM addressing error, returned by write() or read() if upper address bound is exceeded
 const uint8_t EEPROM_ADDR_ERR = 9;
 
 class extEEPROM
 {
     public:
+        //I2C clock frequencies
+        enum twiClockFreq_t { twiClock100kHz = 100000, twiClock400kHz = 400000 };
         extEEPROM(eeprom_size_t deviceCapacity, byte nDevice, unsigned int pageSize, byte eepromAddr = 0x50);
         byte begin(twiClockFreq_t twiFreq = twiClock100kHz);
         byte write(unsigned long addr, byte *values, unsigned int nBytes);
         byte write(unsigned long addr, byte value);
         byte read(unsigned long addr, byte *values, unsigned int nBytes);
         int read(unsigned long addr);
-
+        byte update(unsigned long addr, byte *values, unsigned int nBytes);
+        byte update(unsigned long addr, byte value);
+		unsigned long length();
+		
     private:
         uint8_t _eepromAddr;            //eeprom i2c address
         uint16_t _dvcCapacity;          //capacity of one EEPROM device, in kbits
