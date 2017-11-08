@@ -64,9 +64,9 @@ void loop(void) {
 
   cout << F("FreeStack: ") << FreeStack() << endl;
 
-  // initialize the SD card at SPI_FULL_SPEED for best performance.
-  // try SPI_HALF_SPEED if bus errors occur.
-  if (!sd.begin(chipSelect, SPI_FULL_SPEED)) {
+  // Initialize at the highest speed supported by the board that is
+  // not over 50 MHz. Try a lower speed if SPI errors occur.
+  if (!sd.begin(chipSelect, SD_SCK_MHZ(50))) {
     sd.initErrorHalt();
   }
 
@@ -74,7 +74,7 @@ void loop(void) {
   sd.remove("RawWrite.txt");
 
   // create a contiguous file
-  if (!file.createContiguous(sd.vwd(), "RawWrite.txt", 512UL*BLOCK_COUNT)) {
+  if (!file.createContiguous("RawWrite.txt", 512UL*BLOCK_COUNT)) {
     error("createContiguous failed");
   }
   // get the location of the file's blocks

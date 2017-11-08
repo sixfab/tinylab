@@ -50,7 +50,7 @@ bool FatFile::addDirCluster() {
     DBG_FAIL_MACRO;
     goto fail;
   }
-  block = m_vol->clusterStartBlock(m_curCluster);
+  block = m_vol->clusterFirstBlock(m_curCluster);
   pc = m_vol->cacheFetchData(block, FatCache::CACHE_RESERVE_FOR_WRITE);
   if (!pc) {
     DBG_FAIL_MACRO;
@@ -113,8 +113,8 @@ bool FatFile::contiguousRange(uint32_t* bgnBlock, uint32_t* endBlock) {
         DBG_FAIL_MACRO;
         goto fail;
       }
-      *bgnBlock = m_vol->clusterStartBlock(m_firstCluster);
-      *endBlock = m_vol->clusterStartBlock(c)
+      *bgnBlock = m_vol->clusterFirstBlock(m_firstCluster);
+      *endBlock = m_vol->clusterFirstBlock(c)
                   + m_vol->blocksPerCluster() - 1;
       return true;
     }
@@ -127,6 +127,7 @@ fail:
 bool FatFile::createContiguous(FatFile* dirFile,
                                const char* path, uint32_t size) {
   uint32_t count;
+
   // don't allow zero length file
   if (size == 0) {
     DBG_FAIL_MACRO;
@@ -149,7 +150,6 @@ bool FatFile::createContiguous(FatFile* dirFile,
 
   // insure sync() will update dir entry
   m_flags |= F_FILE_DIR_DIRTY;
-
   return sync();
 
 fail:
@@ -344,7 +344,7 @@ bool FatFile::mkdir(FatFile* parent, fname_t* fname) {
   }
 
   // cache block for '.'  and '..'
-  block = m_vol->clusterStartBlock(m_firstCluster);
+  block = m_vol->clusterFirstBlock(m_firstCluster);
   pc = m_vol->cacheFetchData(block, FatCache::CACHE_FOR_WRITE);
   if (!pc) {
     DBG_FAIL_MACRO;
@@ -612,7 +612,7 @@ bool FatFile::openParent(FatFile* dirFile) {
   if (dirFile->m_dirCluster == 0) {
     return openRoot(dirFile->m_vol);
   }
-  lbn = dirFile->m_vol->clusterStartBlock(dirFile->m_dirCluster);
+  lbn = dirFile->m_vol->clusterFirstBlock(dirFile->m_dirCluster);
   cb = dirFile->m_vol->cacheFetchData(lbn, FatCache::CACHE_FOR_READ);
   if (!cb) {
     DBG_FAIL_MACRO;
@@ -748,7 +748,7 @@ int FatFile::read(void* buf, size_t nbyte) {
           }
         }
       }
-      block = m_vol->clusterStartBlock(m_curCluster) + blockOfCluster;
+      block = m_vol->clusterFirstBlock(m_curCluster) + blockOfCluster;
     }
     if (offset != 0 || toRead < 512 || block == m_vol->cacheBlockNumber()) {
       // amount to be read from current block
@@ -766,7 +766,7 @@ int FatFile::read(void* buf, size_t nbyte) {
       memcpy(dst, src, n);
 #if USE_MULTI_BLOCK_IO
     } else if (toRead >= 1024) {
-      uint8_t nb = toRead >> 9;
+      size_t nb = toRead >> 9;
       if (!isRootFixed()) {
         uint8_t mb = m_vol->blocksPerCluster() - blockOfCluster;
         if (mb < nb) {
@@ -774,10 +774,10 @@ int FatFile::read(void* buf, size_t nbyte) {
         }
       }
       n = 512*nb;
-      if (m_vol->cacheBlockNumber() <= block
+      if (block <= m_vol->cacheBlockNumber()
           && block < (m_vol->cacheBlockNumber() + nb)) {
         // flush cache if a block is in the cache
-        if (!m_vol->cacheSync()) {
+        if (!m_vol->cacheSyncData()) {
           DBG_FAIL_MACRO;
           goto fail;
         }
@@ -941,7 +941,7 @@ bool FatFile::rename(FatFile* dirFile, const char* newPath) {
   // update dot dot if directory
   if (dirCluster) {
     // get new dot dot
-    uint32_t block = m_vol->clusterStartBlock(dirCluster);
+    uint32_t block = m_vol->clusterFirstBlock(dirCluster);
     pc = m_vol->cacheFetchData(block, FatCache::CACHE_FOR_READ);
     if (!pc) {
       DBG_FAIL_MACRO;
@@ -955,7 +955,7 @@ bool FatFile::rename(FatFile* dirFile, const char* newPath) {
       goto fail;
     }
     // store new dot dot
-    block = m_vol->clusterStartBlock(m_firstCluster);
+    block = m_vol->clusterFirstBlock(m_firstCluster);
     pc = m_vol->cacheFetchData(block, FatCache::CACHE_FOR_WRITE);
     if (!pc) {
       DBG_FAIL_MACRO;
@@ -1160,7 +1160,6 @@ bool FatFile::sync() {
   if (!isOpen()) {
     return true;
   }
-
   if (m_flags & F_FILE_DIR_DIRTY) {
     dir_t* dir = cacheDirEntry(FatCache::CACHE_FOR_WRITE);
     // check for deleted by another open file object
@@ -1404,7 +1403,7 @@ int FatFile::write(const void* buf, size_t nbyte) {
       }
     }
     // block for data write
-    uint32_t block = m_vol->clusterStartBlock(m_curCluster) + blockOfCluster;
+    uint32_t block = m_vol->clusterFirstBlock(m_curCluster) + blockOfCluster;
 
     if (blockOffset != 0 || nToWrite < 512) {
       // partial block - must use cache
@@ -1440,12 +1439,12 @@ int FatFile::write(const void* buf, size_t nbyte) {
     } else if (nToWrite >= 1024) {
       // use multiple block write command
       uint8_t maxBlocks = m_vol->blocksPerCluster() - blockOfCluster;
-      uint8_t nBlock = nToWrite >> 9;
+      size_t nBlock = nToWrite >> 9;
       if (nBlock > maxBlocks) {
         nBlock = maxBlocks;
       }
       n = 512*nBlock;
-      if (m_vol->cacheBlockNumber() <= block
+      if (block <= m_vol->cacheBlockNumber()
           && block < (m_vol->cacheBlockNumber() + nBlock)) {
         // invalidate cache if block is in cache
         m_vol->cacheInvalidate();
